@@ -213,37 +213,28 @@ h1 {
     text-align: center;
 }
 
-/* ================= SKILLS ================= */
-.skills {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-}
+<!-- ================= SKILLS ================= -->
+<section class="section">
+    <div class="section-title">TECHNOLOGIES</div>
+    <div class="skills">
+        
+        <div class="skill">
+            <!-- โลโก้ C Programming -->
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="C Programming">
+        </div>
 
-.skill {
-    min-height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    border: 1px solid #1e293b;
-    border-radius: 15px;
-    background: rgba(15, 23, 42, 0.5);
-    transition: 0.3s;
-}
+        <div class="skill">
+            <!-- โลโก้ HTML5 สำหรับ Web Development -->
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5">
+        </div>
 
-.skill:hover {
-    border-color: #0ea5e9;
-    box-shadow: 0 0 20px rgba(14, 165, 233, 0.2);
-    transform: translateY(-3px);
-}
+        <div class="skill">
+            <!-- โลโก้ Arduino แทนการต่อวงจรและฮาร์ดแวร์ -->
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg" alt="Circuit & Hardware">
+        </div>
 
-.skill img {
-    max-width: 100%;
-    max-height: 75px;
-    object-fit: contain;
-    filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));
-}
+    </div>
+</section>
 
 /* ================= CONNECTION ================= */
 .connection {
