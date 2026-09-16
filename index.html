@@ -1,104 +1,748 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jirapong Simmala | Portfolio</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: #ffffff;
-            margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: center;
-        }
-        .portfolio-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 40px;
-            max-width: 800px;
-            width: 100%;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .header h1 {
-            font-size: 2.5em;
-            margin: 0;
-            background: linear-gradient(to right, #00f2fe, #4facfe);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .header p {
-            font-style: italic;
-            color: #b0bec5;
-        }
-        h2 {
-            border-bottom: 2px solid #4facfe;
-            padding-bottom: 10px;
-            margin-top: 30px;
-            font-weight: 600;
-        }
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .skill-badge {
-            background: rgba(79, 172, 254, 0.2);
-            padding: 8px 15px;
-            border-radius: 50px;
-            font-size: 0.9em;
-            border: 1px solid #4facfe;
-        }
-        ul {
-            line-height: 1.8;
-            padding-left: 20px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Apilak007 | Portfolio</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Courier New", monospace;
+    color: #e9ddff;
+    background:
+        radial-gradient(circle at 90% 5%, rgba(130, 40, 255, 0.25), transparent 30%),
+        radial-gradient(circle at 5% 80%, rgba(180, 40, 255, 0.18), transparent 30%),
+        linear-gradient(135deg, #090512, #10071d 50%, #08030f);
+
+    min-height: 100vh;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    width: 92%;
+    max-width: 1100px;
+
+    margin: 18px auto;
+    padding: 13px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 1px solid #7135b8;
+    border-radius: 30px;
+
+    background: rgba(15, 7, 25, 0.75);
+
+    box-shadow:
+        0 0 20px rgba(150, 60, 255, 0.15);
+
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    color: #d49aff;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #bca9d4;
+    text-decoration: none;
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d879ff;
+}
+
+
+/* ================= MAIN ================= */
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    padding-top: 70px;
+    padding-bottom: 55px;
+}
+
+.profile-area {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
+/* PROFILE */
+
+.profile {
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 2px solid #b44cff;
+
+    box-shadow:
+        0 0 20px rgba(180, 76, 255, 0.5);
+}
+
+
+/* INTRO */
+
+.intro {
+    flex: 1;
+}
+
+.small-title {
+    color: #bb65ff;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 12px;
+
+    text-transform: uppercase;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+
+    font-size: clamp(42px, 7vw, 70px);
+
+    line-height: 1;
+
+    margin-bottom: 15px;
+
+    color: #f0ddff;
+
+    text-shadow:
+        0 0 25px rgba(190, 90, 255, 0.25);
+}
+
+.subtitle {
+    font-family: Arial, sans-serif;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: #d8c4ed;
+
+    max-width: 650px;
+}
+
+.intro-text {
+    margin-top: 30px;
+
+    color: #b49cc9;
+
+    line-height: 1.8;
+
+    font-size: 14px;
+
+    max-width: 700px;
+}
+
+
+/* ================= BUTTON ================= */
+
+.github-btn {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 11px 20px;
+
+    border: 1px solid #8f3ee8;
+
+    border-radius: 25px;
+
+    color: #e6cfff;
+
+    text-decoration: none;
+
+    background: rgba(120, 40, 200, 0.12);
+
+    transition: 0.3s;
+}
+
+.github-btn:hover {
+    background: #8735d0;
+
+    color: white;
+
+    box-shadow:
+        0 0 20px rgba(170, 70, 255, 0.5);
+}
+
+
+/* ================= SECTIONS ================= */
+
+.section {
+    margin-top: 45px;
+    margin-bottom: 55px;
+}
+
+.section-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color: #c76dff;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+.section-title::after {
+    content: "";
+
+    height: 1px;
+
+    flex: 1;
+
+    background: linear-gradient(
+        90deg,
+        #7135b8,
+        transparent
+    );
+}
+
+
+/* ================= LEARNING ================= */
+
+.learning-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.learning-item {
+    padding: 12px 15px;
+
+    border-left: 2px solid #a846ff;
+
+    color: #c9b8da;
+
+    background: rgba(100, 40, 150, 0.05);
+
+    transition: 0.3s;
+}
+
+.learning-item:hover {
+    border-left-color: #e58aff;
+
+    background: rgba(160, 60, 220, 0.1);
+
+    transform: translateX(5px);
+}
+
+
+/* ================= EXPERIENCE ================= */
+
+.experience-box {
+    width: 100%;
+    max-width: 500px;
+
+    padding: 25px;
+
+    border: 1px dashed #7d3bc0;
+
+    border-radius: 15px;
+
+    background: rgba(90, 30, 130, 0.08);
+
+    color: #bca9cc;
+
+    line-height: 1.8;
+
+    text-align: center;
+}
+
+
+/* ================= SKILLS ================= */
+
+.skills {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.skill {
+    min-height: 120px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    border: 1px solid #54258a;
+
+    border-radius: 15px;
+
+    background: rgba(60, 20, 90, 0.12);
+
+    transition: 0.3s;
+}
+
+.skill:hover {
+    border-color: #b54dff;
+
+    box-shadow:
+        0 0 20px rgba(170, 60, 255, 0.2);
+
+    transform: translateY(-3px);
+}
+
+.skill img {
+    max-width: 100%;
+    max-height: 75px;
+
+    object-fit: contain;
+}
+
+
+/* ================= CONNECTION ================= */
+
+.connection {
+    padding: 25px;
+
+    display: grid;
+
+    grid-template-columns: 200px 1fr;
+
+    gap: 30px;
+
+    border: 1px solid #63319a;
+
+    border-radius: 15px;
+
+    background: rgba(80, 30, 120, 0.08);
+}
+
+.connection-label {
+    color: #a991b8;
+}
+
+.connection-link {
+    color: #ca70ff;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.connection-link:hover {
+    color: #edb0ff;
+}
+
+.connection p {
+    margin-top: 10px;
+
+    color: #9683a9;
+
+    line-height: 1.7;
+
+    font-size: 13px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+
+    padding: 40px 0;
+
+    color: #685575;
+
+    font-size: 12px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .profile-area {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .connection {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+}
+
+</style>
 </head>
+
+
 <body>
 
-    <div class="portfolio-card">
-        <div class="header">
-            <h1>Jirapong Simmala</h1>
-            <p>"Engineering the Future through Code & Circuits"</p>
-        </div>
 
-        <h2>👋 About Me</h2>
-        <p>Hello! I'm a Computer Engineering student passionate about bridging the gap between software and hardware. I enjoy solving complex problems, simulating circuits, and writing efficient C code.</p>
+<!-- ================= NAVBAR ================= -->
 
-        <h2>💻 Technical Skills</h2>
-        <div class="skills-grid">
-            <span class="skill-badge">C Programming</span>
-            <span class="skill-badge">HTML / CSS / JS</span>
-            <span class="skill-badge">Git & GitHub</span>
-            <span class="skill-badge">Proteus 8 Professional</span>
-            <span class="skill-badge">Circuit Simulation</span>
-        </div>
+<nav class="navbar">
 
-        <h2>🚀 Current Focus</h2>
-        <ul>
-            <li>Building a Computer Lab Equipment Tracking System UI.</li>
-            <li>Mastering memory management and pointers in C.</li>
-            <li>Simulating AC-to-DC power supplies and rectifiers.</li>
-        </ul>
-
-        <h2>🎯 Goals</h2>
-        <ul>
-            <li>Become a proficient Embedded Systems Engineer.</li>
-            <li>Develop robust applications for hardware integration.</li>
-        </ul>
+    <div class="logo">
+        👑 Apilak007
     </div>
+
+    <div class="nav-links">
+
+        <a href="#about">About</a>
+
+        <a href="#interests">Interests</a>
+
+        <a href="#learning">Learning</a>
+
+        <a href="#works">Works</a>
+
+    </div>
+
+</nav>
+
+
+
+<div class="container">
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="profile-area">
+
+        <img
+            src="profile.png"
+            class="profile"
+            alt="Apilak Profile"
+        >
+
+        <div class="intro">
+
+            <div class="small-title">
+                First-year Computer Engineering Student
+            </div>
+
+            <h1>
+                apilak007
+            </h1>
+
+            <div class="subtitle">
+                I want to develop myself to move into
+                an advanced and stable tech career.
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <p class="intro-text">
+        Hi!, I'm apilak. I'm a Computer Engineering student.
+        I enjoy learning programming, technology, networking,
+        IoT and creating things through code. ✦
+    </p>
+
+
+    <a
+        href="https://github.com/apilak007"
+        target="_blank"
+        class="github-btn"
+    >
+        GitHub →
+    </a>
+
+</section>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section
+    class="section"
+    id="about"
+>
+
+    <div class="section-title">
+        ABOUT ME
+    </div>
+
+    <p class="intro-text">
+        I'm currently studying Computer Engineering
+        and learning how technology works.
+        My goal is to continuously improve my skills
+        and create useful projects.
+    </p>
+
+</section>
+
+
+
+<!-- ================= INTERESTS ================= -->
+
+<section
+    class="section"
+    id="interests"
+>
+
+    <div class="section-title">
+        INTERESTS
+    </div>
+
+    <div class="learning-list">
+
+        <div class="learning-item">
+            Programming
+        </div>
+
+        <div class="learning-item">
+            Web Development
+        </div>
+
+        <div class="learning-item">
+            IoT & Electronics
+        </div>
+
+        <div class="learning-item">
+            Computer Technology
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= LEARNING ================= -->
+
+<section
+    class="section"
+    id="learning"
+>
+
+    <div class="section-title">
+        LEARNING
+    </div>
+
+    <div class="learning-list">
+
+        <div class="learning-item">
+            HTML, CSS and JavaScript
+        </div>
+
+        <div class="learning-item">
+            C Programming
+        </div>
+
+        <div class="learning-item">
+            Git & GitHub
+        </div>
+
+        <div class="learning-item">
+            LEGO Mindstorms & micro:bit
+        </div>
+
+        <div class="learning-item">
+            Networking & IoT
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SKILLS ================= -->
+
+<section class="section">
+
+    <div class="section-title">
+        TECHNOLOGIES
+    </div>
+
+    <div class="skills">
+
+        <div class="skill">
+
+            <img
+                src="lego-nxt.png"
+                alt="LEGO NXT"
+            >
+
+        </div>
+
+
+        <div class="skill">
+
+            <img
+                src="lego-ev3.png"
+                alt="LEGO EV3"
+            >
+
+        </div>
+
+
+        <div class="skill">
+
+            <img
+                src="microbit.png"
+                alt="micro:bit"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= WORKS ================= -->
+
+<section
+    class="section"
+    id="works"
+>
+
+    <div class="section-title">
+        EXPERIENCE
+    </div>
+
+    <div class="experience-box">
+
+        🚀
+
+        <br><br>
+
+        ยังไม่มีผลงานในหน้าที่นี้
+        กำลังเรียนรู้อยู่
+        แล้วจะกลับมาเพิ่มเรื่อย ๆ
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CONNECTION ================= -->
+
+<section class="section">
+
+    <div class="section-title">
+        CONNECTION INFORMATION FOR THIS PAGE
+    </div>
+
+
+    <div class="connection">
+
+        <div class="connection-label">
+            Domain name
+        </div>
+
+
+        <div>
+
+            <a
+                href="https://apilak007.github.io"
+                target="_blank"
+                class="connection-link"
+            >
+                🔗 apilak007.github.io
+            </a>
+
+            <p>
+                This page is hosted on GitHub Pages.
+                You can visit my profile and projects here.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<footer>
+
+    © 2026 Apilak007 · Built with HTML & CSS
+
+</footer>
+
+
+</div>
 
 </body>
 </html>
